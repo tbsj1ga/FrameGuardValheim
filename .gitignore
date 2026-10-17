@@ -1,0 +1,49 @@
+# --- Build ---
+# build/ is deliberately NOT ignored: the built DLL lives in the repository so it
+# can simply be downloaded and dropped into plugins. To ship binaries as releases
+# instead of in history, uncomment:
+# build/
+
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+.vs/
+.vscode/
+.idea/
+
+# --- Build artefacts nobody needs ---
+*.pdb
+*.mdb
+*.dll.config
+
+# --- The mod's local data (tied to a machine) ---
+j1ga.frameguard.cfg
+
+# --- Game assemblies, should they ever get copied in here ---
+lib/
+refs/
+assembly_valheim.dll
+UnityEngine*.dll
+netstandard.dll
+SoftReferenceableAssets.dll
+BepInEx.dll
+0Harmony.dll
+
+# --- Thunderstore packages: a release artefact, produced by build.ps1 -Package ---
+build/*.zip
+
+# --- Nexus Mods kits, produced by nexus.ps1 (build.ps1 -Nexus) ---
+build/nexus/
+
+# --- OS clutter ---
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# --- A stray copy of the build in the root: build/FrameGuard.dll is the source of truth ---
+/FrameGuard.dll
+
+# --- Icon sources and prompts live outside the repository ---
+ICON-PROMPT.md

@@ -1,0 +1,13 @@
+# Line endings: LF in the repository, native in the working tree
+* text=auto
+
+*.cs      text diff=csharp
+*.csproj  text
+*.md      text
+*.json    text
+*.cfg     text
+
+# Binaries: never normalise, never diff
+*.dll     binary
+*.png     binary
+*.bin     binary
